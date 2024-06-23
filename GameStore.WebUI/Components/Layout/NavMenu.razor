@@ -1,0 +1,34 @@
+﻿<nav class="navbar navbar-expand-sm bg-body-tertiary bg-dark text-white">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Game.Store</span>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav me-auto @* flex-grow-1 *@">
+                <li class="nav-item">
+                    <a class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">services</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="@GameUrl()">Game</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" asp-controller="Book" asp-action="Index">Genre</a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code{
+    private static string GameUrl() => $"/game";
+}
